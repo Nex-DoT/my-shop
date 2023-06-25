@@ -2,6 +2,7 @@ import React,{useContext} from 'react';
 import { ProductsContext } from '../context/ProductsContextProvider';
 import { Link } from 'react-router-dom/cjs/react-router-dom';
 import style from "../styles/Product.module.css"
+import Navbar from './Navbar';
 
 
 const Details = (props) => {
@@ -9,6 +10,9 @@ const Details = (props) => {
     const data = useContext(ProductsContext)
     const Pdata = data[id - 1] 
     return (
+        <>
+        <Navbar/>
+        
         <div className={style.product}>
             <div className={style.image}>
                   <img src={Pdata.image} alt="" />
@@ -25,6 +29,7 @@ const Details = (props) => {
             </div>
 
         </div>
+        </>
     );
 };
 

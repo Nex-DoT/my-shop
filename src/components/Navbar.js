@@ -1,20 +1,25 @@
-import React from 'react';
+import React,{useContext} from 'react';
+//styel
+import style from "../styles/Navbar.module.css"
 //Link
 import { Link } from 'react-router-dom/cjs/react-router-dom';
 //icon 
 import { AiOutlineShopping } from "react-icons/ai";
+//context
+import { CARTContextOfReducer } from '../context/UseReducerContext';
 const Navbar = () => {
+    const {state} = useContext(CARTContextOfReducer)
     return (
         <>
-            <div>
+            <div className={style.Navbar}>
                 <div>
-                    <Link to="/products">Protucts</Link>
+                    <Link className={style.link} to="/products">Protucts</Link>
                 </div>
 
-                <div>
-                    <AiOutlineShopping/>
-                    <span></span>
-                </div>
+                <Link to="/Cart" className={style.cart}>
+                    <AiOutlineShopping className={style.icon}/>
+                    <span>{state.itemsCounter}</span>
+                </Link>
             </div>
         </>
     );

@@ -6,6 +6,8 @@
     margin: 20px auto;
     display: flex;
     align-items: center;
+    border-radius: 5px;
+    border: 2px solid #892be291;
 }
 .product img{
     position: absolute;
@@ -19,7 +21,7 @@
     height: 280px;
     display: flex;
     border-radius: 5px;
-    border: 2px solid rgba(0, 0, 0, 0.424);
+    /* border: 2px solid rgba(0, 0, 0, 0.424); */
     align-items: center;
     justify-content: center;
     background-color: white;
