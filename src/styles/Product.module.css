@@ -1,0 +1,79 @@
+.product{
+    position: relative;
+    width: 60%;
+    height: 300px;
+    background-color: #e1e1e1;
+    margin: 20px auto;
+    display: flex;
+    align-items: center;
+}
+.product img{
+    position: absolute;
+    width: 75%;
+    height: 75%;
+    object-fit:contain;
+}
+.image{
+    position: relative;
+    width: 280px;
+    height: 280px;
+    display: flex;
+    border-radius: 5px;
+    border: 2px solid rgba(0, 0, 0, 0.424);
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    margin: 30px;
+    box-shadow: 0 3px 10px 1px rgba(0, 0, 0, 0.218);
+}
+.btns{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: absolute;
+    width: auto;
+    bottom: 25px;
+    right: 25px;
+}
+.btns button{
+    padding:5px 10px;
+    border: 2px solid blueviolet;
+    background-color: blueviolet;
+    color: white;
+    border-radius: 3px;
+    cursor: pointer;
+    margin: 3px;
+    transition: 0.2s all;
+    font-size: 18px;
+    font-weight: 500;
+}
+.btns button:hover{
+    background-color: white;
+    color: blueviolet;
+}
+.btns:hover .Link{
+    background-color: white;
+    color: blueviolet;
+}
+h3{
+    padding: 5px 0;
+    margin: 10px 0;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.231) ;
+}
+p{
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    color: white;
+    background-color: green;
+    border: 2px green solid;
+    border-radius: 3px;
+    width: 80px;
+    margin-bottom: 10px ;
+}
+.Link{
+    color: white;
+    text-decoration: none;
+    transition: 0.2s all;
+
+}
