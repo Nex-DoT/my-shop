@@ -12,13 +12,13 @@ const CartX = () => {
         <>
             <Navbar/>
         <div className={style.box}>
-            <div>
+            <div className={style.box1}>
                 {state.selectedItems.map(item => <CardOfCart key={item.id} image={item.image} price={item.price} title={item.title} number={item.quantity} id={item.id} full={item}/>)}
             </div>
-            <div>
+            <div className={style.border}>
                 <div>
-                    <h3>total items: {state.itemsCounter}</h3>
-                    <h3>total Price:${state.total}</h3>
+                    <h5>Total Items:<h4>{state.itemsCounter}</h4></h5>
+                    <h5>Total Price:<h4>${state.total}</h4></h5>
                 </div>
                 <div className={style.btns}>
                     <button onClick={()=>{dispatch({type:"CLEAR"})}}>Clear cart</button>
