@@ -13,7 +13,7 @@ const CartX = () => {
             <Navbar/>
         <div className={style.box}>
             <div>
-                {state.selectedItems.map(item => <CardOfCart key={item.id} image={item.image} price={item.price} title={item.title} number={item.quantity}/>)}
+                {state.selectedItems.map(item => <CardOfCart key={item.id} image={item.image} price={item.price} title={item.title} number={item.quantity} id={item.id} full={item}/>)}
             </div>
             <div>
                 <div>

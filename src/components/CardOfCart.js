@@ -8,24 +8,26 @@ import { quantityCount } from '../Fucntion/function';
 //icon
 import { AiOutlineDelete } from "react-icons/ai";
 
-const CardOfCart = ({image,title,number,price}) => {
+const CardOfCart = ({id, number}) => {
     const {state , dispatch}= useContext(CARTContextOfReducer);
     const data = useContext(ProductsContext)
+    const NewData = data[id - 1];
 
     return (
         <div>  
+            {console.log(NewData)}
             <div>
                 <div>
-                   <img src={image} alt="" />
+                   <img src={NewData.image} alt="" />
                 </div>
-                <h3>{split(title)}</h3>
-                <h3>${price}</h3>
+                <h3>{split(NewData.title)}</h3>
+                <h3>${NewData.price}</h3>
             </div>
             <div>
-                <button onClick={()=>{dispatch({type:"INCREASE" , payload:data.id})}}>+</button>
+                <button onClick={()=>{dispatch({type:"INCREASE" , payload: NewData})}}>+</button>
                 <p>{number}</p>
-                {quantityCount(state , data.id) > 1 && <button onClick={()=>{dispatch({type:"DECREASE" , payload:data})}}>-</button>}         
-                {quantityCount(state , data.id) === 1 && <button onClick={()=>{dispatch({type:"REMOVE_ITEM" , payload:data})}}> <AiOutlineDelete/>  </button>}   
+                {quantityCount(state , id) > 1 && <button onClick={()=>{dispatch({type:"DECREASE" , payload:NewData})}}>-</button>}         
+                {quantityCount(state , id) === 1 && <button onClick={()=>{dispatch({type:"REMOVE_ITEM" , payload:NewData})}}> <AiOutlineDelete/>  </button>}   
             </div>
         </div>
     );
